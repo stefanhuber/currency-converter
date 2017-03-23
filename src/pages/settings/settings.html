@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Settings</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Source Currency</ion-label>
+                <ion-select [(ngModel)]="source">                    
+                    <ion-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Target Currencies</ion-label>
+                <ion-select [(ngModel)]="target" multiple="true">                    
+                    <ion-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</ion-option>
+                </ion-select>
+            </ion-item>
+    </ion-list>
+</ion-content>
